@@ -542,7 +542,31 @@ msg_option_string(uint8_t code, uint16_t option_type) {
     { COAP_OPTION_NORESPONSE, "No-Response" },
     { COAP_OPTION_RTAG, "Request-Tag" },
     { COAP_OPTION_Q_BLOCK1, "Q-Block1" },
-    { COAP_OPTION_Q_BLOCK2, "Q-Block2" }
+    { COAP_OPTION_Q_BLOCK2, "Q-Block2" },
+
+    /* oneM2M Options */
+    { oneM2M_FR, "oneM2M-fr"},
+    { oneM2M_RQI, "oneM2M-rqi"},
+    { oneM2M_OT, "oneM2M-ot"},
+    { oneM2M_RQET, "oneM2M-rqet"},
+    { oneM2M_RSET, "oneM2M-rset"},
+    { oneM2M_OET, "oneM2M-oet"},
+    { oneM2M_RTURI, "oneM2M-rturi"},
+    { oneM2M_EC, "oneM2M-ec"},
+    { oneM2M_RSC, "oneM2M-rsc"},
+    { oneM2M_GID, "oneM2M-gid"},
+    { oneM2M_TY, "oneM2M-ty"},
+    { oneM2M_CTO, "oneM2M-cto"},
+    { oneM2M_CTS, "oneM2M-cts"},
+    { oneM2M_ATI, "oneM2M-ati"},
+    { oneM2M_RVI, "oneM2M-rvi"},
+    { oneM2M_VSI, "oneM2M-vsi"},
+    { oneM2M_GTM, "oneM2M-gtm"},
+    { oneM2M_AUS, "oneM2M-aus"},
+    { oneM2M_ASRI, "oneM2M-asri"},
+    { oneM2M_OMR, "oneM2M-omr"},
+    { oneM2M_PRPI, "oneM2M-prpi"},
+    { oneM2M_MSU, "oneM2M-msu"}
   };
 
   static struct option_desc_t options_csm[] = {

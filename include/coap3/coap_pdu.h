@@ -141,6 +141,30 @@ typedef enum coap_request_t {
 #define COAP_OPTION_NORESPONSE    258 /* _U-_E_U, uint,      0-1 B, RFC7967 */
 #define COAP_OPTION_RTAG          292 /* ___RE_U, opaque,    0-8 B, RFC9175 */
 
+/* oneM2M Options */
+#define oneM2M_FR            279 /* __NR, string, 0-255 B, TS-0008 */
+#define oneM2M_RQI           283 /* __NR, string, 0-255 B, TS-0008 */
+#define oneM2M_OT            259 /* __NR, string,    15 B, TS-0008 */
+#define oneM2M_RQET          291 /* __NR, string,    15 B, TS-0008 */
+#define oneM2M_RSET          295 /* __NR, string,    15 B, TS-0008 */
+#define oneM2M_OET           299 /* __NR, string,    15 B, TS-0008 */
+#define oneM2M_RTURI         263 /* __NR, string, 0-255 B, TS-0008 */
+#define oneM2M_EC            303 /* __NR,   uint,     1 B, TS-0008 */
+#define oneM2M_RSC           307 /* __NR,   uint,     2 B, TS-0008 */
+#define oneM2M_GID           311 /* __NR, string, 0-255 B, TS-0008 */
+#define oneM2M_TY            267 /* __NR,   uint,     2 B, TS-0008 */
+#define oneM2M_CTO           319 /* __NR,   uint,     2 B, TS-0008 */
+#define oneM2M_CTS           323 /* __NR,   uint,     2 B, TS-0008 */
+#define oneM2M_ATI           327 /* __NR, string, 0-255 B, TS-0008 */
+#define oneM2M_RVI           271 /* __NR, string,   1-2 B, TS-0008 */
+#define oneM2M_VSI           331 /* __NR, string, 0-255 B, TS-0008 */
+#define oneM2M_GTM           335 /* __NR, string, 0-512 B, TS-0008 */
+#define oneM2M_AUS           339 /* __NR, string, 0-255 B, TS-0008 */
+#define oneM2M_ASRI          275 /* __NR, string, 0-255 B, TS-0008 */
+#define oneM2M_OMR           343 /* __NR, string, 0-255 B, TS-0008 */
+#define oneM2M_PRPI          347 /* __NR, string, 0-255 B, TS-0008 */
+#define oneM2M_MSU           351 /* __NR, string, 0-255 B, TS-0008 */
+
 #define COAP_MAX_OPT            65535 /**< the highest option number we know */
 
 /* CoAP result codes (HTTP-Code / 100 * 40 + HTTP-Code % 100) */

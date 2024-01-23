@@ -866,6 +866,29 @@ coap_oscore_decrypt_pdu(coap_session_t *session,
     case COAP_OPTION_NORESPONSE:
     case COAP_OPTION_ECHO:
     case COAP_OPTION_RTAG:
+    /* oneM2M Options */
+    case oneM2M_FR:
+    case oneM2M_RQI:
+    case oneM2M_OT:
+    case oneM2M_RQET:
+    case oneM2M_RSET:
+    case oneM2M_OET:
+    case oneM2M_RTURI:
+    case oneM2M_EC:
+    case oneM2M_RSC:
+    case oneM2M_GID:
+    case oneM2M_TY:
+    case oneM2M_CTO:
+    case oneM2M_CTS:
+    case oneM2M_ATI:
+    case oneM2M_RVI:
+    case oneM2M_VSI:
+    case oneM2M_GTM:
+    case oneM2M_AUS:
+    case oneM2M_ASRI:
+    case oneM2M_OMR:
+    case oneM2M_PRPI:
+    case oneM2M_MSU: 
     /* OSCORE does not get copied across */
     case COAP_OPTION_OSCORE:
       break;

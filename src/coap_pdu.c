@@ -547,6 +547,30 @@ coap_option_check_repeatable(coap_option_num_t number) {
   case COAP_OPTION_SIZE1:
   case COAP_OPTION_ECHO:
   case COAP_OPTION_NORESPONSE:
+
+  /* oneM2M Options */
+  case oneM2M_FR:
+  case oneM2M_RQI:
+  case oneM2M_OT:
+  case oneM2M_RQET:
+  case oneM2M_RSET:
+  case oneM2M_OET:
+  case oneM2M_RTURI:
+  case oneM2M_EC:
+  case oneM2M_RSC:
+  case oneM2M_GID:
+  case oneM2M_TY:
+  case oneM2M_CTO:
+  case oneM2M_CTS:
+  case oneM2M_ATI:
+  case oneM2M_RVI:
+  case oneM2M_VSI:
+  case oneM2M_GTM:
+  case oneM2M_AUS:
+  case oneM2M_ASRI:
+  case oneM2M_OMR:
+  case oneM2M_PRPI:
+  case oneM2M_MSU: 
     coap_log_info("Option number %d is not defined as repeatable - dropped\n",
                   number);
     return 0;
@@ -1213,6 +1237,96 @@ coap_pdu_parse_opt_base(coap_pdu_t *pdu, uint16_t len) {
     break;
   case COAP_OPTION_RTAG:
     if (len > 8)
+      res = 0;
+    break; 
+
+  /* oneM2M Options */
+  case oneM2M_FR:
+    if (len < 1 || len > 255)
+      res = 0;
+    break;
+  case oneM2M_RQI:  
+    if (len < 1 || len > 255)
+      res = 0;
+    break;
+  case oneM2M_OT:
+    if (len != 15)
+      res = 0;
+    break;   
+  case oneM2M_RQET:
+    if (len != 15)
+      res = 0;
+    break;
+  case oneM2M_RSET:
+    if (len != 15)
+      res = 0;
+    break;
+  case oneM2M_OET:
+    if (len != 15)
+      res = 0;
+    break;
+  case oneM2M_RTURI:
+    if (len < 1 || len > 255)
+      res = 0;
+    break;
+  case oneM2M_EC:
+    if (len != 1)
+      res = 0;
+    break;
+  case oneM2M_RSC:
+    if (len != 2)
+      res = 0;
+    break;
+  case oneM2M_GID:
+    if (len < 1 || len > 255)
+      res = 0;
+    break;
+  case oneM2M_TY:
+    if (len != 2)
+      res = 0;
+    break;
+  case oneM2M_CTO:
+    if (len != 2)
+      res = 0;
+    break;
+  case oneM2M_CTS:
+    if (len != 2)
+      res = 0;
+    break;
+  case oneM2M_ATI:
+    if (len < 1 || len > 255)
+      res = 0;
+    break;
+  case oneM2M_RVI:
+    if (len != 1 && len != 2)
+      res = 0;
+    break;
+  case oneM2M_VSI:
+    if (len < 1 || len > 255)
+      res = 0;
+    break;
+  case oneM2M_GTM:
+    if (len < 1 || len > 512)
+      res = 0;
+    break;
+  case oneM2M_AUS:
+    if (len < 1 || len > 255)
+      res = 0;
+    break;
+  case oneM2M_ASRI:
+    if (len < 1 || len > 255)
+      res = 0;
+    break;
+  case oneM2M_OMR:
+    if (len < 1 || len > 255)
+      res = 0;
+    break;
+  case oneM2M_PRPI:
+    if (len < 1 || len > 255)
+      res = 0;
+    break;
+  case oneM2M_MSU:
+    if (len < 1 || len > 255)
       res = 0;
     break;
   default:
