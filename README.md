@@ -94,8 +94,3 @@ include open-source software with their respective licensing terms.
 Please refer to
 [LICENSE](https://raw.githubusercontent.com/obgm/libcoap/develop/LICENSE)
 for further details.
-
-ONEM2M UPDATE
-========
-- Add OneM2M Options
-- Modify `COAP_OPT_FILTER_LONG` (coap_option file)
