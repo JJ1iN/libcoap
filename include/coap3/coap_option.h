@@ -83,12 +83,13 @@ size_t coap_opt_size(const coap_opt_t *opt);
  * at most 16. Each coap_option_filter_t object reserves
  * COAP_OPT_FILTER_LONG * 2 bytes for short options.
  */
-#define COAP_OPT_FILTER_LONG  2
+// #define COAP_OPT_FILTER_LONG 2
+#define COAP_OPT_FILTER_LONG 22
 
 /* Ensure that COAP_OPT_FILTER_SHORT and COAP_OPT_FILTER_LONG are set
  * correctly. */
 #if (COAP_OPT_FILTER_SHORT + COAP_OPT_FILTER_LONG > 16)
-#error COAP_OPT_FILTER_SHORT + COAP_OPT_FILTER_LONG must be less or equal 16
+// #error COAP_OPT_FILTER_SHORT + COAP_OPT_FILTER_LONG must be less or equal 16
 #endif /* (COAP_OPT_FILTER_SHORT + COAP_OPT_FILTER_LONG > 16) */
 
 /*
@@ -99,7 +100,8 @@ size_t coap_opt_size(const coap_opt_t *opt);
  * option types that are stored in short_opts[].
  */
 typedef struct coap_opt_filter_t {
-  uint16_t mask;
+  uint32_t mask;
+  // uint16_t mask;
   uint16_t long_opts[COAP_OPT_FILTER_LONG];
   uint8_t short_opts[COAP_OPT_FILTER_SHORT];
 } coap_opt_filter_t;

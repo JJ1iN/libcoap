@@ -433,7 +433,7 @@ coap_option_filter_op(coap_opt_filter_t *filter,
                       enum filter_op_t op) {
   size_t lindex = 0;
   coap_opt_filter_t *of = filter;
-  uint16_t nr, mask = 0;
+  uint32_t nr, mask = 0;
 
   if (is_long_option(number)) {
     mask = LONG_MASK;
