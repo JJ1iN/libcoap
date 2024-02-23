@@ -1242,11 +1242,11 @@ coap_pdu_parse_opt_base(coap_pdu_t *pdu, uint16_t len) {
 
   /* oneM2M Options */
   case oneM2M_FR:
-    if (len < 1 || len > 255)
+    if (len > 255)
       res = 0;
     break;
   case oneM2M_RQI:  
-    if (len < 1 || len > 255)
+    if (len > 255)
       res = 0;
     break;
   case oneM2M_OT:
@@ -1266,7 +1266,7 @@ coap_pdu_parse_opt_base(coap_pdu_t *pdu, uint16_t len) {
       res = 0;
     break;
   case oneM2M_RTURI:
-    if (len < 1 || len > 255)
+    if (len > 255)
       res = 0;
     break;
   case oneM2M_EC:
@@ -1278,11 +1278,11 @@ coap_pdu_parse_opt_base(coap_pdu_t *pdu, uint16_t len) {
       res = 0;
     break;
   case oneM2M_GID:
-    if (len < 1 || len > 255)
+    if (len > 255)
       res = 0;
     break;
   case oneM2M_TY:
-    if (len != 2)
+    if (len != 1 && len != 2)
       res = 0;
     break;
   case oneM2M_CTO:
@@ -1294,7 +1294,7 @@ coap_pdu_parse_opt_base(coap_pdu_t *pdu, uint16_t len) {
       res = 0;
     break;
   case oneM2M_ATI:
-    if (len < 1 || len > 255)
+    if (len > 255)
       res = 0;
     break;
   case oneM2M_RVI:
@@ -1302,31 +1302,31 @@ coap_pdu_parse_opt_base(coap_pdu_t *pdu, uint16_t len) {
       res = 0;
     break;
   case oneM2M_VSI:
-    if (len < 1 || len > 255)
+    if (len > 255)
       res = 0;
     break;
   case oneM2M_GTM:
-    if (len < 1 || len > 512)
+    if (len > 512)
       res = 0;
     break;
   case oneM2M_AUS:
-    if (len < 1 || len > 255)
+    if (len > 255)
       res = 0;
     break;
   case oneM2M_ASRI:
-    if (len < 1 || len > 255)
+    if (len > 255)
       res = 0;
     break;
   case oneM2M_OMR:
-    if (len < 1 || len > 255)
+    if (len > 255)
       res = 0;
     break;
   case oneM2M_PRPI:
-    if (len < 1 || len > 255)
+    if (len > 255)
       res = 0;
     break;
   case oneM2M_MSU:
-    if (len < 1 || len > 255)
+    if (len > 255)
       res = 0;
     break;
   default:
